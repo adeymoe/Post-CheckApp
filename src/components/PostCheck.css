@@ -1,0 +1,182 @@
+.post-check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    margin-top: -500px; /* Adjusted for better responsiveness */
+  }
+  
+  /* Check Button */
+  .check-btn button {
+    width: 15vw; /* Adjusts based on screen width */
+    max-width: 60px; /* Ensures it doesn't get too large */
+    height: 15vw;
+    max-height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .check-btn button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  /* Input Field */
+  .post-input textarea {
+    width: 80vw;
+    max-width: 700px;
+    height: 150px; /* Increased height for better usability */
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    text-align: left;
+    resize: vertical; /* Allows user to adjust height */
+    overflow-y: auto;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .post-input textarea::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .post-input textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2);
+  }
+
+  .post-input textarea::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light background */
+    border-radius: 10px;
+  }
+  
+  .post-input textarea::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient color */
+    border-radius: 10px;
+  }
+  
+  .post-input textarea::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #0056b3, #003f7f);
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 5vw; /* Scales based on screen size */
+    font-weight: 700;
+    color: #c1d4e9b7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Poppins', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(83, 32, 176, 0.2);
+  }
+
+  .postConfirmation {
+    width: 700px; /* Same width as input */
+    background: linear-gradient(135deg, #007bff, #6610f2); /* Gradient blue to purple */
+    border: none; /* Remove default border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    margin-top: 15px; /* Keep it close to the input */
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+    color: #fff; /* White text for contrast */
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Smooth fade-in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Header Styling */
+  .postConfirmation h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Text Styling */
+  .postConfirmationText {
+    font-size: 16px;
+    color: #f8f9fa;
+    line-height: 1.6;
+    word-wrap: break-word; /* Prevent overflow */
+    font-weight: 500;
+  }
+  
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .post-check {
+      margin-top: -100px; /* Adjust position on smaller screens */
+    }
+
+    .postConfirmation {
+    width: 90%; /* Make it fit smaller screens */
+    padding: 10px;
+    }
+    
+    .check-btn button {
+      width: 50px;
+      height: 50px;
+    }
+
+    .postConfirmation h3 {
+      font-size: 16px;
+    }
+  
+    .postConfirmationText {
+      font-size: 14px;
+    }
+  
+    .post-input textarea {
+      width: 90vw; /* Makes sure input fits smaller screens */
+    }
+  
+    .logo {
+      font-size: 6vw;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .post-check {
+      margin-top: -50px;
+    }
+    
+    .check-btn button {
+      width: 45px;
+      height: 45px;
+    }
+  
+    .post-input textarea {
+      width: 95vw;
+    }
+  
+    .logo {
+      font-size: 7vw;
+    }
+  }
+  
