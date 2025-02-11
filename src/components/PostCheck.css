@@ -4,13 +4,13 @@
     align-items: center;
     gap: 15px;
     justify-content: center;
-    margin-top: -500px; /* Adjusted for better responsiveness */
+    margin-top: -500px; 
   }
   
   /* Check Button */
   .check-btn button {
-    width: 15vw; /* Adjusts based on screen width */
-    max-width: 60px; /* Ensures it doesn't get too large */
+    width: 15vw; 
+    max-width: 60px; 
     height: 15vw;
     max-height: 60px;
     border-radius: 50%;
@@ -33,7 +33,7 @@
   .post-input textarea {
     width: 80vw;
     max-width: 700px;
-    height: 150px; /* Increased height for better usability */
+    height: 150px; 
     padding: 15px;
     border: 2px solid #ddd;
     border-radius: 15px;
@@ -41,7 +41,7 @@
     outline: none;
     transition: 0.3s ease-in-out;
     text-align: left;
-    resize: vertical; /* Allows user to adjust height */
+    resize: vertical; 
     overflow-y: auto;
     font-family: 'Poppins', sans-serif;
   }
@@ -56,12 +56,12 @@
   }
 
   .post-input textarea::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Light background */
+    background: #f1f1f1; 
     border-radius: 10px;
   }
   
   .post-input textarea::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient color */
+    background: linear-gradient(45deg, #007bff, #0056b3); 
     border-radius: 10px;
   }
   
@@ -71,7 +71,7 @@
   
   /* Logo */
   .logo {
-    font-size: 5vw; /* Scales based on screen size */
+    font-size: 5vw; 
     font-weight: 700;
     color: #c1d4e9b7;
     text-transform: uppercase;
@@ -83,19 +83,19 @@
   }
 
   .postConfirmation {
-    width: 700px; /* Same width as input */
-    background: linear-gradient(135deg, #007bff, #6610f2); /* Gradient blue to purple */
-    border: none; /* Remove default border */
-    border-radius: 15px; /* Rounded corners */
+    width: 700px; 
+    background: linear-gradient(135deg, #007bff, #6610f2); 
+    border: none; 
+    border-radius: 15px; 
     padding: 20px;
-    margin-top: 15px; /* Keep it close to the input */
+    margin-top: 15px; 
     text-align: center;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
-    color: #fff; /* White text for contrast */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); 
+    color: #fff; 
     animation: fadeIn 0.5s ease-in-out;
   }
   
-  /* Smooth fade-in effect */
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -123,7 +123,7 @@
     font-size: 16px;
     color: #f8f9fa;
     line-height: 1.6;
-    word-wrap: break-word; /* Prevent overflow */
+    word-wrap: break-word; 
     font-weight: 500;
   }
   
@@ -131,11 +131,11 @@
   /* Responsive Adjustments */
   @media (max-width: 768px) {
     .post-check {
-      margin-top: -100px; /* Adjust position on smaller screens */
+      margin-top: -100px; 
     }
 
     .postConfirmation {
-    width: 90%; /* Make it fit smaller screens */
+    width: 90%; 
     padding: 10px;
     }
     
@@ -153,7 +153,7 @@
     }
   
     .post-input textarea {
-      width: 90vw; /* Makes sure input fits smaller screens */
+      width: 90vw;
     }
   
     .logo {
