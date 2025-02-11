@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react()],
 
   server: {
-    host: '0.0.0.0', // Allow external access
-    port: process.env.PORT || 5173, // Use Render's assigned port
+    host: "0.0.0.0",
+    port: process.env.PORT || 5173,
+    strictPort: true,
+    allowedHosts: ["post-checkapp.onrender.com"]
   }
-})
