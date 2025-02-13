@@ -5,6 +5,7 @@ const PostCheck = () => {
 
   const [postToCheck, setPostToCheck] = useState("");
   const [postConfirmation, setPostConfirmation] = useState(null)
+  // const [postToTweet, setPostToTweet] = useState("");
 
   const checkPost = async (postToCheck) => {
     if(postToCheck.trim() === ""){
@@ -28,7 +29,7 @@ const PostCheck = () => {
     });
 
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     
     if (data.candidates && data.candidates.length > 0) {
       setPostConfirmation(data.candidates[0].content.parts[0].text);
@@ -41,6 +42,22 @@ const PostCheck = () => {
 }
   }
 
+  const tweetPost = (postConfirmation, postToCheck) => {
+    const post = postConfirmation;
+    const post2 =postToCheck;
+
+
+    const postToTweet = post.match(/The correct sentence is:\s*"([^"]+)"/);
+    if (postToTweet) {
+      const text = encodeURIComponent(postToTweet[1]);
+      window.open(`https://twitter.com/intent/tweet?text=${text}`, "_blank");
+      
+    } else{
+      const text = post2;
+      window.open(`https://twitter.com/intent/tweet?text=${text}`, "_blank");
+    }
+  }
+
 
 
   return (
@@ -51,15 +68,21 @@ const PostCheck = () => {
       <div className="post-input">
         <textarea value={postToCheck} onChange={(e) => setPostToCheck(e.target.value)} name="post-input-box" placeholder='Paste your post to check error' id=""></textarea>
       </div>
-
       {postConfirmation && (
         <div className='postConfirmation'>
           <h3>Post Confirmation:</h3>
           <p className='postConfirmationText'>{postConfirmation}</p>
         </div>
       )
-
       }
+      {postConfirmation && (
+        <button 
+        className="tweet-btn" 
+        onClick={() => {tweetPost(postConfirmation, postToCheck)}}
+      >
+        TWEET
+      </button>
+      )}
     </div>
   )
 }
