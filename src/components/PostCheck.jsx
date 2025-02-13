@@ -13,7 +13,7 @@ const PostCheck = () => {
       return;
     }
 
-    const prompt = `Check "${postToCheck}" for grammartical error and correct`
+    const prompt = `Check "${postToCheck}" for grammartical error and correct and start the result with "The correct sentence is: "`
 
     try {
       const url = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`
